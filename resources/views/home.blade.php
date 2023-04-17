@@ -3,10 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-6 m-auto">
+                <form action="" method="">
 
-            <livewire:counter />
+                    <livewire:directorselection />
 
+                </form>
+            </div>
         </div>
     </div>
 </div>

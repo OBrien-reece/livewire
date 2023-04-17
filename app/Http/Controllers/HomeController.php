@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Director;
+use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $directors = Director::all();
+        $movies = Movie::all();
+
+        return view('home', [
+            'directors' => $directors,
+            'movies' => $movies
+        ]);
     }
 }
